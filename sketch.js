@@ -37,9 +37,12 @@ function draw() {
   drawSprites();
 
   text("press the space button  to change bottles",210,42)
+  text("you have to use space button to change the bootles below ",300,89)
+
   fill("white")
   
 text("score:"+ score,208,60)
+
 }
 
 function keyPressed(){
@@ -47,12 +50,9 @@ function keyPressed(){
     plasticbottle.addImage(bottleImg)
     plasticbottle2.addImage(bottleImg)
     plasticbottle3.addImage(bottleImg)
-    score=+1
+    score=+3
 
-if(score = 3){
-text("yay you have saved enviorment",130,34)
-GameState= END
+
 }
 
   }
-}
