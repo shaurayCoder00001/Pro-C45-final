@@ -1,4 +1,3 @@
-
 var score = 0
 
 function preload(){
@@ -17,17 +16,14 @@ function setup() {
  bottle.addImage(bottleImg)
  bottle.scale = 0.2
 
- plasticbottle = createSprite(390,270,50 ,10)
+ plasticbottle = createSprite(390,270,30 ,10)
  plasticbottle.addImage(plasticbottleImg)
  plasticbottle.scale = 0.3
  
- plasticbottle2 = createSprite(400,200,50 ,10)
+ plasticbottle2 = createSprite(420,290,20 ,10)
  plasticbottle2.addImage(plasticbottleImg)
  plasticbottle2.scale = 0.3
  
- plasticbottle3 = createSprite(350,270,50 ,10)
- plasticbottle3.addImage(plasticbottleImg)
- plasticbottle3.scale = 0.3
  
  
 }
@@ -48,9 +44,11 @@ text("score:"+ score,208,60)
 function keyPressed(){
   if(keyCode === 32){
     plasticbottle.addImage(bottleImg)
+    plasticbottle.scale = 0.2
     plasticbottle2.addImage(bottleImg)
-    plasticbottle3.addImage(bottleImg)
-    score=+3
+    plasticbottle2.scale = 0.2
+    
+    score=+2
 
 
 }
