@@ -1,51 +1,4 @@
-var score = 0
-
-function preload(){
-backgroundImg = loadImage("Background.jfif")
-bottleImg= loadImage('bottle steel.jpeg')
-plasticbottleImg=loadImage("plastic bootle.jpg")
-}
-
-function setup() {
-  createCanvas(800,400);
-  
-  
-  stand1 = createSprite (420,318,250,10);
-
- bottle =createSprite(100, 200, 50, 50);
- bottle.addImage(bottleImg)
- bottle.scale = 0.2
-
- plasticbottle = createSprite(390,270,10 ,10)
- plasticbottle.addImage(plasticbottleImg)
- plasticbottle.scale = 0.3
- 
- plasticbottle2 = createSprite(440,270,10 ,10)
- plasticbottle2.addImage(plasticbottleImg)
- plasticbottle2.scale = 0.3
- 
- 
- 
-}
-
-function draw() {
-  background(backgroundImg);  
-  drawSprites();
-
-  text("press the space button  to change bottles",210,42)
-  text("you have to use space button to change the bootles below ",300,89)
-
-  fill("white")
-  
-text("score:"+ score,208,60)
-
-}
-
-function keyPressed(){
-  if(keyCode === 32){
-    plasticbottle.addImage(bottleImg)
-    plasticbottle.scale = 0.1
-    plasticbottle2.addImage(bottleImg)const Engine = Matter.Engine;
+const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
@@ -66,10 +19,10 @@ function setup() {
   world = engine.world;
   Engine.run(engine);
  
-  stand1 = new Stand(430,300,250,10);
+  stand1 = new Stand(420,300,250,10);
  
   
-  plasticbootle1 = new Block(30,275,30,40);
+  plasticbootle1 = new Block(300,275,30,40);
   plasticbootle2 = new Block(330,275,30,40);
   plasticbootle3 = new Block(360,275,30,40);
   plasticbootle4 = new Block(390,275,30,40);
@@ -105,9 +58,6 @@ function draw() {
   ;
   
   
-if (polygon.body.speed =3 ){
-   score+=2
-}
   
   stand1.display();
 
@@ -129,20 +79,21 @@ if (polygon.body.speed =3 ){
   plasticbootle13.display();
   plasticbootle14.display();
   plasticbootle15.display();
+
   plasticbootle16.display();
   
 slingShot.display()
 
-  
 imageMode (CENTER)
-image(polygon_img,polygon.position.x,polygon.position.y,100,100)
+image(polygon_img,polygon.position.x,polygon.position.y,100,110)
 //ellipse(0,0,this.r, this.r);
 //ellipseMode(CENTER)
 text("press the space button to get another change",40,40)
 fill("white")
 
 text("goal : You need to dissepear  all plastic bottles from the stand",100,100)
-text("score:"+score,100,120)
+
+text("score :"+ score,80,80)
 }
 function mouseDragged(){
   Matter.Body.setPosition(this.polygon, {x: mouseX , y: mouseY});
@@ -150,18 +101,12 @@ function mouseDragged(){
 
 function mouseReleased(){
   slingShot.fly()
+  
 }
 function keyPressed(){
   if(keyCode === 32){
       slingShot.attach(this.polygon)
+  
      
   }
-  }
-    plasticbottle2.scale = 0.1
-    
-    score=+2
-
-
-}
-
   }
