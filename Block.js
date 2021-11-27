@@ -7,7 +7,7 @@ class Block{
         this.body = Bodies.rectangle(x, y, width, height, options);
         this.width = width;
         this.height = height;
-        this.image= loadImage("plastic bootle.jpg")
+        this.image= loadImage(" bottle.jpg")
         World.add(world, this.body);
         this.Visiblity=255
       }

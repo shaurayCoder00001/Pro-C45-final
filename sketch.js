@@ -10,8 +10,8 @@ var score = 0
 var slingShot
 var polygon_img;
 function preload(){
-  polygon_img=loadImage("bottle steel.jpeg");
- backgroundimg=loadImage("Background.jfif")
+  polygon_img=loadImage("paper.jpg");
+ backgroundimg=loadImage("office.jpg")
 }
 function setup() {
   createCanvas(900,400);
@@ -94,6 +94,7 @@ fill("white")
 text("goal : You need to dissepear  all plastic bottles from the stand",100,100)
 
 text("score :"+ score,80,80)
+fill("black")
 }
 function mouseDragged(){
   Matter.Body.setPosition(this.polygon, {x: mouseX , y: mouseY});
